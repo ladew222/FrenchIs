@@ -15,8 +15,7 @@ Addresses <- paste(raw$Site_Address, ", La Crosse, WI, 54603", sep = " ")
 Member_Coordinates <- geocode(Addresses)
 write.csv(Member_Coordinates,"geocode.csv")
 #raw <- geocoded_addresses[!is.na(site_address) & !is.na(geocoded_addresses$Longitude),]
-## api key=AIzaSyCYGK_waYm7jqyZY4MRixwFgMZt8q1lEoA
-#register_google(key = 'AIzaSyCYGK_waYm7jqyZY4MRixwFgMZt8q1lEoA')
+
 
 print(Member_Coordinates[,1:2])
 raw$Latitude<-Member_Coordinates$lat
